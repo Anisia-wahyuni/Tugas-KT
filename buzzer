@@ -1,0 +1,16 @@
+int val;
+
+void setup() {
+  pinMode (13,OUTPUT);
+  Serial.begin(9600);
+}
+void loop() {
+  
+  val = analogRead(0)
+  val = map(val, 0, 1023, 100, 2500);
+  Serial.println(val);
+  
+  tone(13, val);
+  delay(100);
+  
+}
